@@ -9,7 +9,7 @@
 .page {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #1d2671, #c33764);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,49 +19,53 @@
 .Container {
   height: 420px;
   width: 620px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
   color: #ffffff;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 28px;
   padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* TITLE */
 #title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   letter-spacing: 4px;
-  margin-bottom: 10px;
-  color: #ffdd57;
+  margin-bottom: 6px;
+  color: #00f5d4;
 }
 
 #state {
-  font-size: 3rem;
-  opacity: 0.9;
+  font-size: 2.8rem;
+  opacity: 0.95;
+  color: #e0f2ff;
 }
 
 /* WEATHER PROPS */
 .small {
-  margin-top: 50px;
+  margin-top: 45px;
   display: flex;
   justify-content: space-around;
 }
 
 /* EACH PROP */
 .prop {
-  height: 180px;
+  height: 150px;
   width: 150px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 15px;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .prop:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(0, 245, 212, 0.25);
 }
 
 /* ICONS */
@@ -69,12 +73,41 @@ img {
   height: 70px;
   width: 70px;
   margin-bottom: 10px;
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
 }
 
 /* TEXT */
 .text {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
+  color: #f1faff;
+}
+
+/* MENU */
+.city-select {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  color: #eaffff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.city-select:hover {
+  border-color: #00f5d4;
+}
+
+.city-select:focus {
+  border-color: #00f5d4;
+  box-shadow: 0 0 0 2px rgba(0, 245, 212, 0.35);
+}
+
+.city-select option {
+  background: #0f2027;
   color: #ffffff;
 }

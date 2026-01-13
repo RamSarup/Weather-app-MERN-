@@ -1,5 +1,4 @@
-import React from 'react'
-import Page from './assets/Controller/Page'
+import Page from "./Controller/Page"
 
 const App = () => {
   return (
